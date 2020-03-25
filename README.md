@@ -1,23 +1,22 @@
-# Azure ML E2E Workshop
+# Azure ML E2E Workshop (Updated to 2020)
 
 ## Target Audience
-Anyone who wants a comprehensive E2E understanding of Azure ML.
+Anyone who wants a comprehensive end-to-end understanding of Azure Machine Learning (AzureML).
 
 ## Key Goals
-1.	Understand the product E2E
-2.	Ensure that the work we are doing in Mn will address key gaps in usability / E2E user experience
-3.	Open bugs, fix docs & ensure commitments from product area leads on whether / how those bugs will be fixed
+1. Understand the core concepts of AzureML
+1. Understand how to use AzureML in an end-to-end fashion
+1. Serve as a reference for common scenarios
 
 ## Agenda
 
-### Workspace Concepts: infra setup, ARM, workspace setup, computes, datastores, setup**
+### Workspace Concepts: infra setup, ARM, workspace setup, computes, datastores, setup
 1. [Set up your workspace and compute](./1-workspace-concepts/1-setup-compute.md)
 1. [Register a dataset](./1-workspace-concepts/2-dataset.md)
 1. [Run AutoML from the UI](./1-workspace-concepts/3-automl.md)
 1. [Compute Instance - Clone Git Repo](./1-workspace-concepts/5-clone-git-repo.md)
 
-
-### Datasets, Model Training (AML, HyperDrive and AutoML), Model Inference**
+### Datasets, Model Training (AML, HyperDrive and AutoML), Model Inference
 
 #### Notebooks to run and research:
 
@@ -42,9 +41,9 @@ Pipelines & Batch Inference
 - [Create automation workflow with EventGrid](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-event-grid#sample-scenarios)
 
 ### Enterprise Readiness
-- Azure Monitor https://docs.microsoft.com/en-us/azure/machine-learning/service/monitor-azure-machine-learning
-- RBAC https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security
-- https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-assign-roles
-- Limits service https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-manage-quotas
-- VNET https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-enable-virtual-network
+- [Enteprise Security Overview](https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-enterprise-security)
+- [Manage access via RBAC](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-assign-roles)
+- [Managing compute quotas](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-manage-quotas)
+- [VNET integration](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-enable-virtual-network)
+- [Azure Monitor](https://docs.microsoft.com/en-us/azure/machine-learning/service/monitor-azure-machine-learning)
 
