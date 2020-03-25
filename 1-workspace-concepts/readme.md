@@ -1,8 +1,9 @@
 # Workspace UI Walkthrough
-Run through this module in the following order:
-1. [Set up your workspace and compute](1-setup-compute.md)
-1. [Register a dataset](2-dataset.md)
-1. [Run AutoML from the UI](3-automl.md)
-1. [Compute Instance - Clone Git Repo](5-clone-git-repo.md)
 
-Designer content pending updates.
+Run through this module in the following order (some steps are optional for the rest of the workshop):
+
+1. [`1-setup-compute.md`](1-setup-compute.md) - Set up your workspace and compute
+1. [`2-dataset.md`](2-dataset.md) - Register a dataset
+1. [`3-automl.md`](3-automl.md) - Run AutoML from the UI (optional)
+1. [`4-designer.md`](4-designer.md) - Designer interface (optional)
+1. [`5-clone-git-repo.md`](5-clone-git-repo.md) - Clone git repo to Compute Instance
