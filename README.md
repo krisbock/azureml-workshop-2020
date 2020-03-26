@@ -11,10 +11,13 @@ Anyone who wants a comprehensive end-to-end understanding of Azure Machine Learn
 ## Agenda
 
 ### Workspace Concepts: infra setup, ARM, workspace setup, computes, datastores, setup
-1. [Set up your workspace and compute](./1-workspace-concepts/1-setup-compute.md)
-1. [Register a dataset](./1-workspace-concepts/2-dataset.md)
-1. [Run AutoML from the UI](./1-workspace-concepts/3-automl.md)
-1. [Compute Instance - Clone Git Repo](./1-workspace-concepts/5-clone-git-repo.md)
+
+1. [Set up your workspace and compute](1-workspace-concepts/1-setup-compute.md)
+1. [Register a dataset](1-workspace-concepts/2-dataset.md)
+1. [Run AutoML from the UI](1-workspace-concepts/3-automl.md) (optional)
+1. [Designer interface](1-workspace-concepts/4-designer.md) (optional)
+1. [Clone git repo to Compute Instance](1-workspace-concepts/5-clone-git-repo.md)
+
 
 ### Datasets, Model Training (AML, HyperDrive and AutoML), Model Inference
 
