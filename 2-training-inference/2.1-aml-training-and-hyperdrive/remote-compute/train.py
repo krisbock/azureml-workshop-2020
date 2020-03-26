@@ -102,9 +102,6 @@ model_pipeline = Pipeline(steps=[('preprocessor', DataFrameMapper(transformation
 # Check Scikit-Learn docs to see the hyper-parameters available for the LogisticRegression:
 # https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
 
-
-# +
-
 # Split data into train and test
 x_train, x_test, y_train, y_test = train_test_split(attritionXData,
                                                     target,
@@ -112,8 +109,6 @@ x_train, x_test, y_train, y_test = train_test_split(attritionXData,
                                                     random_state=0,
                                                     stratify=target)
 
-
-# +
 
 OUTPUT_DIR='./outputs'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -131,12 +126,6 @@ print('Training the model')
 # preprocess the data and train the classification model
 trained_model = model_pipeline.fit(x_train, y_train)
 
-# (CDLTLL - Not used)
-# model = model_pipeline.steps[-1][1]
-
-# +
-# Calculate Accuracy for x_test
-
 # Make Multiple Predictions
 y_predictions = trained_model.predict(x_test)
 
@@ -152,23 +141,13 @@ run.log("Accuracy", float(accuracy))
 cm = confusion_matrix(y_test, y_predictions)
 print(cm)
 
-# Save the model as .pkl file
-
-# +
-# save model file to the outputs/ folder to use outside the script
+# Save the model as .pkl file and
+# save model file to the outputs/ folder - this will auto upload the model to the run in AzureML
 model_file_name = 'classif-empl-attrition.pkl'
 joblib.dump(value=trained_model, filename=os.path.join(OUTPUT_DIR, model_file_name))
 
 # Upload model .pkl file to the ROOT folder
 # run.upload_file('model_copy.pkl', os.path.join(OUTPUT_DIR, model_file_name))
-
-# register the model with the model management service for later use
-# (CDLTLL) Not needed here. I can register the model after the remote run, from the outside, depending on the results 
-#
-# original_model = run.register_model(model_name='classif-empl-attrition-aml-comp',
-#                                     model_path=os.path.join(OUTPUT_DIR, model_file_name))
-
-# -
 
 if not is_remote_run:
     run.complete()
