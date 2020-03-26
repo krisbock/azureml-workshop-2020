@@ -6,25 +6,24 @@ In this module we will be using both the Jupyter and the RStudio instances that 
 
 ### Part 0: Setup
 
-Before running through this module, please execute the setup script to make sure all required components are installed by opening a Jupyter terminal window and running the following command in the subdirectory `5-r` of this repository:
-
-```
-sudo Rscript 0-setup.R
-```
+From the "Compute instances" tab in [AzureML studio](ml.azure.com), open the `Jupyter` link to launch Jupyter on your compute instance. Navigate to the `5-r/0-setup.R` notebook and run through the notebook.
 
 If you get a `Would you like to install Miniconda? [Y/n]` prompt please enter `n`.
 
+![](images/studio_link.png)
+
 ### Part 1: Explore in Jupyter
 
-From the "Compute instances" tab in [AzureML studio](ml.azure.com), open the `Jupyter` link to launch Jupyter on your compute instance. Navigate to the `1-explore-r.ipynb` notebook and run through the notebook.
-
-![](images/studio_link.png)
+Navigate to the `1-explore-r.ipynb` notebook and run through the notebook.
 
 ### Part 2: Train a model on AmlCompute
 
 From the "Compute instances" tab in [AzureML studio](ml.azure.com), open the `RStudio` link under "Application URI" to launch RStudio web interface on your compute instance. Once in RStudio, in the bottom right tab "Files" navigate to `code/` and then where you cloned this repo to, for instance `code/azureml-workshop-2020`. Open `2-train-on-amlcompute.R`.
 
 Prior to running the script, set the working directory to the current file location using `setwd(dirname)`, or `Session -> Set Working Directory -> To Source File Location`, or `More -> Set As Working Directory`.
+
+You can step through the code by using `CRTL+Enter`.
+Again, if you get a `Would you like to install Miniconda? [Y/n]` prompt please enter `n`.
 
 ![](images/rstudio.png)
 
