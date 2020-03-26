@@ -6,6 +6,7 @@ ws <- load_workspace_from_config()
 ds <- get_default_datastore(ws)
 
 # Upload attrition data set to the datastore
+# Note: We could have obviously re-used the dataset we've created earlier!
 upload_files_to_datastore(ds,
                           list("../data/IBM-Employee-Attrition.csv"),
                           target_path = 'attrition',
