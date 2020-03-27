@@ -4,6 +4,11 @@
 
 To run through this workshop, you will need an Azure subscription and an Azure ML workspace. See instructions on how to create a workspace [here](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-manage-workspace) and make sure to select `Enterprise` edition.
 
+:star: If you want to have this workshop go smooth, then:
+
+- Name your AzureML workspace `aml-workshop`
+- Name the resource group of the workshop `aml-workshop`
+
 ![](images/create_workspace.png)
 
 Navigate to [`https://ml.azure.com/`](https://ml.azure.com/) and select your newly created workspace.
