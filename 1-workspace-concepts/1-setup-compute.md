@@ -36,6 +36,8 @@ Next, we will create an Compute Instance. The Compute Instance will serve as an 
  
 1. Choose some sufficiently unique name, keep the default VM type (`STANDARD_D3_V2` - a fairly inexpensive machine type costing about $0.22/hour in `eastus2`) and click `Create`:
 
+:star: Use an unique name for the compute instance, as it needs to be globally unique.
+
 ![](images/create_compute_instance.png)
 
 See [here](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-environment#compute-instance) for details on creating Compute Instances.
