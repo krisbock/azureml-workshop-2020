@@ -23,22 +23,25 @@ Anyone who wants a comprehensive end-to-end understanding of Azure Machine Learn
 
 #### Notebooks to run and research:
 
-AML training, HyperDrive and Interpretability:
-- [Notebook for plain vanilla Scikit-Learn model training in AML local compute (AML VM)](./2-training-inference/2.1-aml-training-and-hyperdrive/1-scikit-learn-local-training-on-notebook-plus-aml-ds-and-log/binayclassification-employee-attrition-notebook.ipynb)
-- [Notebook for Scikit-Learn model training in AML remote compute and HyperDrive](./2-training-inference/2.1-aml-training-and-hyperdrive/2-scikit-learn-remote-training-on-aml-compute-plus-hyperdrive/binayclassification-employee-attrition-aml-compute-notebook.ipynb) 
-- [Notebook for Model Interpretability in AML](./2-training-inference/2.2-aml-interpretability/1-simple-feature-transformations-explain-local.ipynb)
+AML training including HyperDrive:
+- [Notebook for plain vanilla Scikit-Learn model training in AML local compute (AML VM)](2-training-inference/local-compute/binayclassification-employee-attrition-notebook.ipynb)
+- [Notebook for Scikit-Learn model training in AML remote compute and HyperDrive](2-training-inference/2.1-aml-training-and-hyperdrive/remote-training/binayclassification-employee-attrition-aml-compute-notebook.ipynb)
+
+Interpretability:
+- [Notebook for Model Interpretability in AML on local compute](2-training-inference/2.2-aml-interpretability/1-simple-feature-transformations-explain-local.ipynb)
+- [Notebook for Model Interpretability on AML Compute](2-training-inference/2.2-aml-interpretability/2-explain-model-on-amlcompute.ipynb)
 
 Automated ML:
-- [Notebook for AutoML local compute](./2-training-inference/2.1-aml-training-and-hyperdrive/2-scikit-learn-remote-training-on-aml-compute-plus-hyperdrive/binayclassification-employee-attrition-aml-compute-notebook.ipynb)
-- [Notebook for AutoML remote compute](./2-training-inference/2.1-aml-training-and-hyperdrive/2-scikit-learn-remote-training-on-aml-compute-plus-hyperdrive/binayclassification-employee-attrition-aml-compute-notebook.ipynb)
+- [Notebook for AutoML local compute](2-training-inference/2.3-automl-training/local-compute/binayclassification-employee-attrition-autoaml-local-compute.ipynb)
+- [Notebook for AutoML remote compute](2-training-inference/2.3-automl-training/remote-compute/binayclassification-employee-attrition-autoaml-remote-amlcompute.ipynb)
 
-Pipelines & Batch Inference
+Pipelines & Batch Inference:
 - [Use a model for batch inference](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/machine-learning-pipelines/parallel-run/tabular-dataset-inference-iris.ipynb)
 
 
 ### MLOps (model management, deployment, inference, automation)
 
-#### **Tutorials for MLOps**
+#### Tutorials for MLOps
 - [Deploy a model](./3-mlops/deploy-attrition-model.ipynb)
 - [Automate training & deployment](./3-mlops/mlopsworkshop.md)
 - [Create automation workflow with EventGrid](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-event-grid#sample-scenarios)
