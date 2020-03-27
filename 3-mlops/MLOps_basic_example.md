@@ -96,6 +96,14 @@ Once all three pipelines ran, we should be able to see in the AzureML studio:
 - Model should have been registered
 - A new endpoint should have been registerd 
 
+New experiment:
+
+![](images/exp-ci.png)
+
+Model registered:
+
+![](images/model_reg.png)
+
 We can now try out the model by using the `Consume` tab under the AKS endpoint.
 
 Done!
