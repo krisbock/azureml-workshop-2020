@@ -2,8 +2,9 @@
 
 ## Tutorials for MLOps
 
-- [Deploy a model to ACI via Python](./3-mlops/deploy-attrition-model.ipynb) (Starting Point)
-- [Automate training & deployment](./3-mlops/mlopsworkshop.md)
+- [Deploy a model to ACI via Python](deploy-attrition-model.ipynb) (Starting point)
+- [Automate training & deployment](MLOps_basic_example.md) (Basic example)
+- [Automate training & deployment using ML Pipelines](MLOps_with_ML_pipelines.md) **Work in Progress!** (Advanced example using [ML Pipelines](https://docs.microsoft.com/en-us/azure/machine-learning/concept-ml-pipelines))
 - [Create automation workflow with EventGrid](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-event-grid#sample-scenarios)
 
 ## Reading Material
