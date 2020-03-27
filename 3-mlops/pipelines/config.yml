@@ -4,7 +4,7 @@ variables:
   ml-rg: 'aml-workshop' # AML resource Group name
 
   ml-ct: 'cpu-cluster' # AML Compute cluster name
-  ml-aks-name: 'aks-prod-workshop' # AKS cluster name
+  ml-aks-name: 'aks-prodws' # AKS cluster name
 
   ml-path: '3-mlops' # Model directory path in repo
   ml-exp: 'ibm-attrition-ci' # Experiment name
