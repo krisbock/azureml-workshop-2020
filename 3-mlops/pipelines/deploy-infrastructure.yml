@@ -44,4 +44,4 @@ steps:
     scriptLocation: inlineScript
     scriptType: bash
     inlineScript: |
-      az ml computetarget create aks --name -n $(ml-aks-name) --vm-size STANDARD_D3_V2 --cluster-purpose DevTest
+      az ml computetarget create aks -n $(ml-aks-name) --vm-size STANDARD_D3_V2 --cluster-purpose DevTest
