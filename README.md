@@ -28,7 +28,7 @@ AML training including HyperDrive:
 - [Notebook for Scikit-Learn model training in AML remote compute and HyperDrive](2-training-inference/2.1-aml-training-and-hyperdrive/remote-training/binayclassification-employee-attrition-aml-compute-notebook.ipynb)
 
 Interpretability:
-- [Notebook for Model Interpretability in AML on local compute](2-training-inference/2.2-aml-interpretability/1-simple-feature-transformations-explain-local.ipynb)
+- [Notebook for Model Interpretability in AML on local compute](2-training-inference/2.2-aml-interpretability/1-simple-feature-transformations-explain-local.ipynb) (includes upload explaination to the experiment)
 - [Notebook for Model Interpretability on AML Compute](2-training-inference/2.2-aml-interpretability/2-explain-model-on-amlcompute.ipynb)
 
 Automated ML:
@@ -42,8 +42,9 @@ Pipelines & Batch Inference:
 ### MLOps (model management, deployment, inference, automation)
 
 #### Tutorials for MLOps
-- [Deploy a model](./3-mlops/deploy-attrition-model.ipynb)
-- [Automate training & deployment](./3-mlops/mlopsworkshop.md)
+- [Deploy a model to ACI with Python](./3-mlops/deploy-attrition-model.ipynb) - Start with this!
+- [Automate training & deployment](./3-mlops/MLOps_basic_example.md) - Basic example to get started with MLOps in Azure DevOps
+- [Automate training & deployment using ML Pipelines](./3-mlops/MLOps_with_ML_pipelines.md) **Work in Progress!** 
 - [Create automation workflow with EventGrid](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-event-grid#sample-scenarios)
 
 ### Enterprise Readiness
