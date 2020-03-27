@@ -71,14 +71,18 @@ model = clf.steps[-1][1]
 
 model_file_name = 'log_reg.pkl'
 
+#TODO: Write out the real model file :)
+#TODO: Add explain code
+
 # save model in the outputs folder so it automatically get uploaded
 with open(model_file_name, 'wb') as file:
-    joblib.dump(value=clf, filename=os.path.join('./outputs/',
-                                                 model_file_name))
+    joblib.dump(value=clf, filename=os.path.join('./outputs/', model_file_name))
 
 run = Run.get_context()
 run.upload_file('x_test_ibm.pkl', os.path.join('./outputs/', x_test_pkl))
 
-# Register the model
+# Upload the model (just take the one from the repo...needs to be changed)
 run.upload_file('original_model.pkl', os.path.join('./outputs/', model_file_name))
-original_model = run.register_model(model_name='IBM_attrition_model', model_path='original_model.pkl')
+
+# Register model
+#original_model = run.register_model(model_name='IBM_attrition_model', model_path='original_model.pkl')
