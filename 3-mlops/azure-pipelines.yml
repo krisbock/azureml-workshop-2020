@@ -1,16 +1,11 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - master
 
 variables: { 
-  mlWorkspaceConnection: 'build-demo' ,
-  mlWorkspaceName: 'build-2019-demo',
-  resourceGroupName: 'scottgu-all-hands'
-  }
+  mlWorkspaceConnection: 'aml-workshop',
+  mlWorkspaceName: 'aml-workshop',
+  resourceGroupName: 'aml-workshop'
+}
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -30,7 +25,7 @@ steps:
     azureSubscription: $(mlWorkspaceConnection)
     scriptLocation: inlineScript
     inlineScript: 'az ml folder attach -w $(mlWorkspaceName) -g $(resourceGroupName)'
-    workingDirectory: '4-mlops'
+    workingDirectory: '3-mlops'
 
 
 - task: AzureCLI@1
@@ -39,7 +34,7 @@ steps:
     azureSubscription: $(mlWorkspaceConnection)
     scriptLocation: inlineScript
     inlineScript: 'az ml pipeline create --name trainattrition -y training-ml-pipeline.yml'
-    workingDirectory: '4-mlops'
+    workingDirectory: '3-mlops'
 
 - task: AzureCLI@1
   displayName: 'Submit script run'
@@ -47,4 +42,4 @@ steps:
     azureSubscription: $(mlWorkspaceConnection)
     scriptLocation: inlineScript
     inlineScript: 'az ml run submit-script -c train -e test train_explain.py'
-    workingDirectory: '4-mlops'
+    workingDirectory: '3-mlops'

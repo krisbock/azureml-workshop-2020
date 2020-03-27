@@ -1,7 +1,7 @@
 {
    "entryScript": "score.py",
    "runtime": "python",
-   "condaFile": "myenv.yml",
+   "condaFile": "inference-env.yml",
    "sourceDirectory": null,
    "enableGpu": false,
    "baseImage": null,
