@@ -90,6 +90,8 @@ For sake of this workshop, we have disabled automatic triggering of the pipeline
 
 The last pipeline `delete-infrastructure` can be used to get rid of the AKS cluster (for saving cost).
 
+![](images/pipeline_runs.png)
+
 Once all three pipelines ran, we should be able to see in the AzureML studio:
 
 - New experiment run should have been created
@@ -104,6 +106,60 @@ Model registered:
 
 ![](images/model_reg.png)
 
-We can now try out the model by using the `Consume` tab under the AKS endpoint.
+Our new endpoint:
 
-Done!
+![](images/aks_service.png)
+
+We can now try out the model by using the `Consume` tab under the AKS endpoint:
+
+![](images/endpoint_details.png)
+
+
+```
+POST http://<your endpoint address>:80/api/v1/service/ibm-attrition-aks/score HTTP/1.1
+Authorization: Bearer <your key>
+Content-Type: application/json
+
+{
+	"data": [{
+		"Age": 41,
+		"BusinessTravel": "Travel_Rarely",
+		"DailyRate": 1102,
+		"Department": "Sales",
+		"DistanceFromHome": 1,
+		"Education": 2,
+		"EducationField": "Life Sciences",
+		"EnvironmentSatisfaction": 2,
+		"Gender": "Female",
+		"HourlyRate": 94,
+		"JobInvolvement": 3,
+		"JobLevel": 2,
+		"JobRole": "Sales Executive",
+		"JobSatisfaction": 4,
+		"MaritalStatus": "Single",
+		"MonthlyIncome": 5993,
+		"MonthlyRate": 19479,
+		"NumCompaniesWorked": 8,
+		"OverTime": "No",
+		"PercentSalaryHike": 11,
+		"PerformanceRating": 3,
+		"RelationshipSatisfaction": 1,
+		"StockOptionLevel": 0,
+		"TotalWorkingYears": 8,
+		"TrainingTimesLastYear": 0,
+		"WorkLifeBalance": 1,
+		"YearsAtCompany": 6,
+		"YearsInCurrentRole": 4,
+		"YearsSinceLastPromotion": 0,
+		"YearsWithCurrManager": 5
+	}]
+}
+```
+
+Response:
+
+```
+{"result": [0]}
+```
+
+Perfect, looks like we are done!
