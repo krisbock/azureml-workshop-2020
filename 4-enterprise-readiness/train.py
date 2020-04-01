@@ -16,15 +16,10 @@ from azureml.core import Run
 # from azureml.contrib.explain.model.tabular_explainer import TabularExplainer
 # from azureml.contrib.explain.model.explanation.explanation_client import ExplanationClient
 
-# os.makedirs('./outputs', exist_ok=True)
-
-# Get the IBM employee attrition dataset
-# attritionData = pd.read_csv('./WA_Fn-UseC_-HR-Employee-Attrition.csv')
-
 os.makedirs('./outputs', exist_ok=True)
 
 print('load dataset')
-#ws = Workspace.from_config()
+
 run = Run.get_context()
 print(run.input_datasets)
 attritionData = run.input_datasets['attrition'].to_pandas_dataframe()
@@ -119,8 +114,8 @@ run = Run.get_context()
 run.upload_file('x_test_ibm.pkl', os.path.join('./outputs/', x_test_pkl))
 
 # Register original model
-run.upload_file('original_model.pkl', os.path.join('./outputs/', model_file_name))
-original_model = run.register_model(model_name='IBM_attrition_model', model_path='original_model.pkl')
+#run.upload_file('original_model.pkl', os.path.join('./outputs/', model_file_name))
+#original_model = run.register_model(model_name='IBM_attrition_model', model_path='original_model.pkl')
 
 # Register scoring explainer
 # run.upload_file('IBM_attrition_explainer.pkl', scoring_explainer_path)
