@@ -22,16 +22,16 @@ Anyone who wants a comprehensive end-to-end understanding of Azure Machine Learn
 ### 2 - Datasets, Model Training (AML, HyperDrive and AutoML), Model Inference
 
 AML training including HyperDrive:
-1. [Notebook for plain vanilla Scikit-Learn model training in AML local compute (AML VM)](2-training-inference/local-compute/binayclassification-employee-attrition-notebook.ipynb)
-1. [Notebook for Scikit-Learn model training in AML remote compute and HyperDrive](2-training-inference/2.1-aml-training-and-hyperdrive/remote-training/binayclassification-employee-attrition-aml-compute-notebook.ipynb)
+1. [Notebook for plain vanilla Scikit-Learn model training in AML local compute (AML VM)](2-training-inference/2.1-aml-training-and-hyperdrive/local-compute/binaryclassification-employee-attrition-notebook.ipynb)
+1. [Notebook for Scikit-Learn model training in AML remote compute and HyperDrive](2-training-inference/2.1-aml-training-and-hyperdrive/remote-compute/binaryclassification-employee-attrition-aml-compute-notebook.ipynb)
 
 Interpretability:
 1. [Notebook for Model Interpretability in AML on local compute](2-training-inference/2.2-aml-interpretability/1-simple-feature-transformations-explain-local.ipynb) (includes upload explaination to the experiment)
 1. [Notebook for Model Interpretability on AML Compute](2-training-inference/2.2-aml-interpretability/2-explain-model-on-amlcompute.ipynb)
 
 Automated ML:
-1. [Notebook for AutoML local compute](2-training-inference/2.3-automl-training/local-compute/binayclassification-employee-attrition-autoaml-local-compute.ipynb)
-1. [Notebook for AutoML remote compute](2-training-inference/2.3-automl-training/remote-compute/binayclassification-employee-attrition-autoaml-remote-amlcompute.ipynb)
+1. [Notebook for AutoML local compute](2-training-inference/2.3-automl-training/local-compute/binaryclassification-employee-attrition-autoaml-local-compute.ipynb)
+1. [Notebook for AutoML remote compute](2-training-inference/2.3-automl-training/remote-compute/binaryclassification-employee-attrition-autoaml-remote-amlcompute.ipynb)
 
 Pipelines & Batch Inference:
 1. [Use a model for batch inference](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/machine-learning-pipelines/parallel-run/tabular-dataset-inference-iris.ipynb)
