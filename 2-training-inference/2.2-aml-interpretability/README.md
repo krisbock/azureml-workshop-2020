@@ -26,7 +26,7 @@ You are going to work on the Compute Instance you created [earlier](../1-new-wor
 
 1. In the terminal window clone this repository by typing:
         ```
-        git clone https://github.com/csiebler/azureml-workshop-2020
+        git clone https://github.com/krisbock/azureml-workshop-2020
         ```
 ![](images/clone_jupyter.png)
 
