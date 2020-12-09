@@ -24,7 +24,7 @@ steps:
     scriptLocation: inlineScript
     scriptType: bash
     inlineScript: |
-      az ml folder attach -w $(ml-ws) -g $(ml-rg)
+      az ml folder attach -g $(ml-rg) -w $(ml-ws) 
 
 - task: AzureCLI@2
   displayName: 'Create CPU-based compute for training'
