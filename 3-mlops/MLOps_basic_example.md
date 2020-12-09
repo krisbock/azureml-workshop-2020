@@ -19,7 +19,7 @@ In order to set up automated training and deployment, you need to create a servi
 
 **Important:** Make sure you point it to workshop workspace and be sure to name the Service connection `aml-workshop`!
 
-**Note:** Creating service connection using Azure Machine Learning extension requires 'Owner' or 'User Access Administrator' permissions on the Workspace.
+**Note:** Creating the Azure Resource Manager service connection scope requires 'Owner' or 'User Access Administrator' permissions on the subscription. You'll also need sufficient permissions to register an application with your Azure AD tenant, or you can get the ID and secret of a service principal from your Azure AD Administrator. That principal must have 'Contributor' permissions on the subscription.
 
 This is how your service connection looks like. Make sure to pick your resource group and AML workspace.
 
