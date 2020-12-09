@@ -14,9 +14,9 @@ Datasets enable:
 
 ## Uploading a Dataset to AzureML studio
 
-:star: Download dataset: [IBM-Employee-Attrition.csv](https://raw.githubusercontent.com/csiebler/azureml-workshop-2020/master/data/IBM-Employee-Attrition.csv)
+:star: Download dataset: [IBM-Employee-Attrition.csv](https://raw.githubusercontent.com/krisbock/azureml-workshop-2020/master/data/IBM-Employee-Attrition.csv)
 
-1. Download the IBM Attrition dataset by clicking on this link: [IBM-Employee-Attrition.csv](https://raw.githubusercontent.com/csiebler/azureml-workshop-2020/master/data/IBM-Employee-Attrition.csv) and save the file to disk.
+1. Download the IBM Attrition dataset by clicking on this link: [IBM-Employee-Attrition.csv](https://raw.githubusercontent.com/krisbock/azureml-workshop-2020/master/data/IBM-Employee-Attrition.csv) and save the file to disk.
 
 1. Goto the [AzureML studio](https://ml.azure.com)
 

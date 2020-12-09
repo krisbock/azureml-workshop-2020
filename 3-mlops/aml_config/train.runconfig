@@ -3,7 +3,7 @@
   "arguments": [
 
   ],
-  "target": "cpu",
+  "target": "cpu-cluster",
   "framework": "Python",
   "communicator": "None",
   "autoPrepareEnvironment": true,
