@@ -9,11 +9,15 @@ from sklearn.preprocessing import StandardScaler,OneHotEncoder
 from sklearn_pandas import DataFrameMapper
 import os
 import pandas as pd
+import numpy as np
 import shutil
-
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score
 from azureml.core import Run, Dataset, Workspace
 
 ws = Run.get_context().experiment.workspace
+run = Run.get_context()
+
 os.makedirs('./outputs', exist_ok=True)
 
 attritionData = Dataset.get_by_name(ws,'IBM-Employee-Attrition').to_pandas_dataframe()
@@ -67,19 +71,57 @@ with open(x_test_pkl, 'wb') as file:
     joblib.dump(value=x_test, filename=os.path.join('./outputs/', x_test_pkl))
 
 # preprocess the data and fit the classification model
-clf.fit(x_train, y_train)
-model = clf.steps[-1][1]
+model = clf.fit(x_train, y_train)
+#model = clf.steps[-1][1]
 
+# Make Multiple Predictions
+y_predictions = model.predict(x_test)
+
+accuracy = accuracy_score(y_test, y_predictions)
+# (Method 2 with svm model) accuracy = svm_model_linear.score(x_test, y_test)
+
+print('Accuracy of LogisticRegression classifier on test set: {:.2f}'.format(accuracy))
+
+# Set Accuracy metric to the run.log to be used later by Azure ML's tracking and metrics capabilities
+run.log("Accuracy", float(accuracy))
+
+# creating a confusion matrix
+cm = confusion_matrix(y_test, y_predictions)
+print(cm)
+
+# Save the model as .pkl file and
+# save model file to the outputs/ folder - this will auto upload the model to the run in AzureML
 model_file_name = 'log_reg.pkl'
 
 #TODO: Write out the real model file :)
-#TODO: Add explain code
+from interpret.ext.blackbox import TabularExplainer
+from azureml.interpret import ExplanationClient
+# create an explanation client to store the explanation (contrib API)
+client = ExplanationClient.from_run(run)
+print('create explainer')
+# create an explainer to validate or debug the model
+tabular_explainer = TabularExplainer(clf.steps[-1][1],
+                                     initialization_examples=x_train,
+                                     features=attritionXData.columns,
+                                     classes=["Not leaving", "leaving"],
+                                     transformations=transformations)
+
+# explain overall model predictions (global explanation)
+# passing in test dataset for evaluation examples - note it must be a representative sample of the original data
+# more data (e.g. x_train) will likely lead to higher accuracy, but at a time cost
+global_explanation = tabular_explainer.explain_global(x_test)
+
+print('upload explanation')
+# uploading model explanation data for storage or visualization
+comment = 'Global explanation on classification model trained on IBM employee attrition dataset'
+client.upload_model_explanation(global_explanation, comment=comment)
+
 
 # save model in the outputs folder so it automatically get uploaded
 with open(model_file_name, 'wb') as file:
     joblib.dump(value=clf, filename=os.path.join('./outputs/', model_file_name))
 
-run = Run.get_context()
+
 run.upload_file('x_test_ibm.pkl', os.path.join('./outputs/', x_test_pkl))
 
 # Upload the model (just take the one from the repo...needs to be changed)

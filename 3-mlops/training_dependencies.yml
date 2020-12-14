@@ -18,4 +18,5 @@ dependencies:
   - azureml-core
   - azureml-telemetry
   - azureml-explain-model
+  - azureml-contrib-interpret
 - scikit-learn

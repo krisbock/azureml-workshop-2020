@@ -1,0 +1,36 @@
+{
+    "_experiment_name": "ibm-attrition-cicd",
+    "cancel_uri": "https://australiaeast.experiments.azureml.net/execution/v1.0/subscriptions/3c8972d9-f541-46b2-b70b-d81baba3595d/resourceGroups/amlworkshop/providers/Microsoft.MachineLearningServices/workspaces/amlworkshop/experiments/ibm-attrition-cicd/runId/ibm-attrition-cicd_1607943589_eb4a7c32/cancel",
+    "created_by": {
+        "user_name": "Kris Bock",
+        "user_object_id": "929acbe3-7bf8-429c-8f68-cab0a88305ab",
+        "user_tenant_id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+    },
+    "created_utc": "2020-12-14T12:28:00.370136Z",
+    "data_container_id": "dcid.ibm-attrition-cicd_1607943589_eb4a7c32",
+    "diagnostics_uri": "https://australiaeast.experiments.azureml.net/execution/v1.0/subscriptions/3c8972d9-f541-46b2-b70b-d81baba3595d/resourceGroups/amlworkshop/providers/Microsoft.MachineLearningServices/workspaces/amlworkshop/experiments/ibm-attrition-cicd/runId/ibm-attrition-cicd_1607943589_eb4a7c32/diagnostics",
+    "experiment_id": "03a5e3d5-a267-4c56-81a5-ddc8e1071bc0",
+    "hidden": false,
+    "properties": {
+        "ContentSnapshotId": "bb7b9426-069c-4417-a0cf-2a446a669a6b",
+        "_azureml.ComputeTargetType": "amlcompute",
+        "azureml.git.branch": "master",
+        "azureml.git.commit": "f2ddf12cdd0ccbaf1f4dabb1e3a41b3d9f7d8687",
+        "azureml.git.dirty": "True",
+        "azureml.git.repository_uri": "git@github.com:krisbock/azureml-workshop-2020.git",
+        "mlflow.source.git.branch": "master",
+        "mlflow.source.git.commit": "f2ddf12cdd0ccbaf1f4dabb1e3a41b3d9f7d8687",
+        "mlflow.source.git.repoURL": "git@github.com:krisbock/azureml-workshop-2020.git"
+    },
+    "root_run_id": "ibm-attrition-cicd_1607943589_eb4a7c32",
+    "root_run_uuid": "bc6e6370-5df8-47c2-bb52-c1ee5663f238",
+    "run_id": "ibm-attrition-cicd_1607943589_eb4a7c32",
+    "run_number": 8,
+    "run_type": "azureml.scriptrun",
+    "run_uuid": "bc6e6370-5df8-47c2-bb52-c1ee5663f238",
+    "script_name": "train_explain.py",
+    "status": "Completed",
+    "tags": {},
+    "target": "cpu-cluster",
+    "user_id": "929acbe3-7bf8-429c-8f68-cab0a88305ab"
+}
