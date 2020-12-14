@@ -79,7 +79,7 @@ clf = Pipeline(steps=[('preprocessor', DataFrameMapper(transformations)),
 
 # +
 from interpret.ext.blackbox import TabularExplainer
-from azureml.contrib.interpret.explanation.explanation_client import ExplanationClient
+from azureml-interpret import ExplanationClient
 # create an explanation client to store the explanation (contrib API)
 client = ExplanationClient.from_run(run)
 
